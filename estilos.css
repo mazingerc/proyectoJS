@@ -1,0 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(img/generador.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
