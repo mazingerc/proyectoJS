@@ -4,12 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto JS</title>
+    <title>Chamba!</title>
     <link rel="stylesheet" href="estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="shortcut icon" href="../proyectoJS/img/fav.png" type="image/x-icon">
     <head>
         <title>Generar números de la suerte Euromillones</title>
     </head>
       <body>
+
+        <nav class="navbar navbar-expand-md bg-body" id="botonera">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+            <img src="img/logo.png" alt="logo chamba">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <a class="nav-link" href="https://www.juegoseguro.es/" target="_blank">Juego seguro</a>
+                <a class="nav-link" href="https://www.loteriasyapuestas.es/es/resultados/euromillones/comprobar" target="_blank">Comprueba</a>
+                <a class="nav-link" href="https://www.loteriasyapuestas.es/es/noticias/premios" target="_blank">Premios</a>
+              </div>
+            </div>
+          </div>
+        </nav>
         
         <div class="container">
             <form>
@@ -22,13 +44,26 @@
               <label for="age">Edad:</label>
               <input type="number" id="age" name="age" required>
           
-              <button type="button" id="generate-btn">Mucha suerte!</button>
+              <button type="button" id="generate-btn">Genera tus números!</button>
             </form>
-          
-            <div class="numbers"></div>
-            <div class="lucky-stars"></div>
-          </div>
+        </div>
+        
+        <div class="bolas">
+          <div class="numbers"></div>
+          <div class="lucky-stars"></div>
+        </div>
 
+        <button id="mostrar-fecha" class="centrado">Próximo sorteo</button>
+
+        <div id="fecha-sorteo"></div>
+
+        <div class="loading" id="loading-container">
+            <img src="../proyectoJS/img/loading.png" id="load" class="hidden" alt="loading">
+        </div>
+        
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
         <script src="main.js"></script>
         
       </body>
